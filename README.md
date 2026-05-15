@@ -11,7 +11,7 @@ CROON ranked #1 in 5 of 10 target languages in a shuffled anonymous Gemini dubbi
 - Metric: top-1 votes across 10 shuffled anonymous rounds per language
 - Clip: first 60 seconds of each source video
 
-Full report: https://croondottv.github.io/evaluation/
+Data: `data/summary.json` and `data/rounds/`
 
 ## Method
 
