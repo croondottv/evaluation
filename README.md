@@ -1,8 +1,8 @@
 # CROON Dubbing Evaluation
 
-CROON ranked #1 in 5 of 10 target languages in a shuffled anonymous Gemini dubbing benchmark.
+![CROON dubbing benchmark chart wall](assets/benchmark-chart-wall.svg)
 
-![Benchmark chart wall](assets/benchmark-chart-wall.svg)
+CROON ranked #1 in 5 of 10 target languages in a shuffled anonymous Gemini dubbing benchmark.
 
 ## Result
 
