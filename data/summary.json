@@ -1,0 +1,659 @@
+{
+  "report_title": "CROON dubbing evaluation benchmark",
+  "created_at": "2026-05-15",
+  "model": "gemini-3.1-flash-lite-preview",
+  "primary_metric": "top-1 votes across 10 shuffled relative ranking rounds per language",
+  "clip_range": "first 60 seconds of each source video",
+  "providers": [
+    "CROON",
+    "ElevenLabs",
+    "HeyGen",
+    "Rask",
+    "YouTube Auto-dub"
+  ],
+  "headline_result": {
+    "croon_first_place_languages": [
+      "Japanese",
+      "French",
+      "Portuguese",
+      "Chinese",
+      "Spanish"
+    ],
+    "croon_first_place_count": 5,
+    "total_languages": 10
+  },
+  "cases": [
+    {
+      "case_id": "VQHBjfJIQMA-en-to-ja",
+      "source_video_id": "VQHBjfJIQMA",
+      "source_video": {
+        "title": "Self-driving isn't near done – Andrej Karpathy",
+        "url": "https://www.youtube.com/watch?v=VQHBjfJIQMA",
+        "speaker_context": "Andrej Karpathy interview clip",
+        "duration_seconds": 217,
+        "uploader": "Dwarkesh Clips"
+      },
+      "source_language": "English",
+      "target_language": "Japanese",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "croon",
+        "provider_name": "CROON",
+        "blind_label": "s04",
+        "top1_count": 7,
+        "average_rank": 1.6,
+        "borda_score": 44,
+        "average_overall_score": 8.26
+      },
+      "providers": {
+        "croon": {
+          "provider_name": "CROON",
+          "blind_label": "s04",
+          "top1_count": 7,
+          "average_rank": 1.6,
+          "borda_score": 44,
+          "average_overall_score": 8.26
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "blind_label": "s02",
+          "top1_count": 2,
+          "average_rank": 3,
+          "borda_score": 30,
+          "average_overall_score": 7.04
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "blind_label": "s03",
+          "top1_count": 1,
+          "average_rank": 3.6,
+          "borda_score": 24,
+          "average_overall_score": 6.62
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "blind_label": "s05",
+          "top1_count": 0,
+          "average_rank": 2.8,
+          "borda_score": 32,
+          "average_overall_score": 7.45
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "blind_label": "s01",
+          "top1_count": 0,
+          "average_rank": 4,
+          "borda_score": 20,
+          "average_overall_score": 6.24
+        }
+      }
+    },
+    {
+      "case_id": "HKgEsdmMFUA-en-to-fr",
+      "source_video_id": "HKgEsdmMFUA",
+      "source_video": {
+        "title": "Will AI Friends Help Combat the Loneliness Epidemic? – Mark Zuckerberg",
+        "url": "https://www.youtube.com/watch?v=HKgEsdmMFUA",
+        "speaker_context": "Mark Zuckerberg interview clip",
+        "duration_seconds": 259,
+        "uploader": "Dwarkesh Clips"
+      },
+      "source_language": "English",
+      "target_language": "French",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "croon",
+        "provider_name": "CROON",
+        "top1_count": 5,
+        "average_rank": 1.7,
+        "borda_score": 43,
+        "average_overall_score": 8.26
+      },
+      "providers": {
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 5,
+          "average_rank": 1.7,
+          "borda_score": 43,
+          "average_overall_score": 8.26
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 4,
+          "average_rank": 1.7,
+          "borda_score": 43,
+          "average_overall_score": 8.22
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 1,
+          "average_rank": 2.8,
+          "borda_score": 32,
+          "average_overall_score": 7.49
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 0,
+          "average_rank": 4.3,
+          "borda_score": 17,
+          "average_overall_score": 5.63
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 0,
+          "average_rank": 4.5,
+          "borda_score": 15,
+          "average_overall_score": 5.75
+        }
+      }
+    },
+    {
+      "case_id": "HKgEsdmMFUA-en-to-pt",
+      "source_video_id": "HKgEsdmMFUA",
+      "source_video": {
+        "title": "Will AI Friends Help Combat the Loneliness Epidemic? – Mark Zuckerberg",
+        "url": "https://www.youtube.com/watch?v=HKgEsdmMFUA",
+        "speaker_context": "Mark Zuckerberg interview clip",
+        "duration_seconds": 259,
+        "uploader": "Dwarkesh Clips"
+      },
+      "source_language": "English",
+      "target_language": "Portuguese",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "croon",
+        "provider_name": "CROON",
+        "top1_count": 5,
+        "average_rank": 1.7,
+        "borda_score": 43,
+        "average_overall_score": 8.66
+      },
+      "providers": {
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 5,
+          "average_rank": 1.7,
+          "borda_score": 43,
+          "average_overall_score": 8.66
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 3,
+          "average_rank": 2,
+          "borda_score": 40,
+          "average_overall_score": 8.44
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 1,
+          "average_rank": 2.6,
+          "borda_score": 34,
+          "average_overall_score": 7.95
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 1,
+          "average_rank": 4.2,
+          "borda_score": 18,
+          "average_overall_score": 6.27
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 0,
+          "average_rank": 4.5,
+          "borda_score": 15,
+          "average_overall_score": 6.2
+        }
+      }
+    },
+    {
+      "case_id": "BYXbuik3dgA-en-to-zh",
+      "source_video_id": "BYXbuik3dgA",
+      "source_video": {
+        "title": "Elon Musk – \"In 36 months, the cheapest place to put AI will be space”",
+        "url": "https://www.youtube.com/watch?v=BYXbuik3dgA",
+        "speaker_context": "Elon Musk long-form interview excerpt",
+        "duration_seconds": 10185,
+        "uploader": "Dwarkesh Patel"
+      },
+      "source_language": "English",
+      "target_language": "Chinese",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "croon",
+        "provider_name": "CROON",
+        "top1_count": 5,
+        "average_rank": 1.9,
+        "borda_score": 41,
+        "average_overall_score": 8.29
+      },
+      "providers": {
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 5,
+          "average_rank": 1.9,
+          "borda_score": 41,
+          "average_overall_score": 8.29
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 2,
+          "average_rank": 3.5,
+          "borda_score": 25,
+          "average_overall_score": 7.05
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 1,
+          "average_rank": 2.1,
+          "borda_score": 39,
+          "average_overall_score": 8.23
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 1,
+          "average_rank": 3.7,
+          "borda_score": 23,
+          "average_overall_score": 6.87
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 1,
+          "average_rank": 3.8,
+          "borda_score": 22,
+          "average_overall_score": 6.86
+        }
+      }
+    },
+    {
+      "case_id": "BYXbuik3dgA-en-to-es",
+      "source_video_id": "BYXbuik3dgA",
+      "source_video": {
+        "title": "Elon Musk – \"In 36 months, the cheapest place to put AI will be space”",
+        "url": "https://www.youtube.com/watch?v=BYXbuik3dgA",
+        "speaker_context": "Elon Musk long-form interview excerpt",
+        "duration_seconds": 10185,
+        "uploader": "Dwarkesh Patel"
+      },
+      "source_language": "English",
+      "target_language": "Spanish",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "croon",
+        "provider_name": "CROON",
+        "top1_count": 4,
+        "average_rank": 2.3,
+        "borda_score": 37,
+        "average_overall_score": 8.12
+      },
+      "providers": {
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 4,
+          "average_rank": 2.3,
+          "borda_score": 37,
+          "average_overall_score": 8.12
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 3,
+          "average_rank": 3.1,
+          "borda_score": 29,
+          "average_overall_score": 7.51
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 2,
+          "average_rank": 2.3,
+          "borda_score": 37,
+          "average_overall_score": 8.1
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 1,
+          "average_rank": 3.7,
+          "borda_score": 23,
+          "average_overall_score": 6.98
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 0,
+          "average_rank": 3.6,
+          "borda_score": 24,
+          "average_overall_score": 7.06
+        }
+      }
+    },
+    {
+      "case_id": "HKgEsdmMFUA-en-to-de",
+      "source_video_id": "HKgEsdmMFUA",
+      "source_video": {
+        "title": "Will AI Friends Help Combat the Loneliness Epidemic? – Mark Zuckerberg",
+        "url": "https://www.youtube.com/watch?v=HKgEsdmMFUA",
+        "speaker_context": "Mark Zuckerberg interview clip",
+        "duration_seconds": 259,
+        "uploader": "Dwarkesh Clips"
+      },
+      "source_language": "English",
+      "target_language": "German",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "rask",
+        "provider_name": "Rask",
+        "top1_count": 4,
+        "average_rank": 1.9,
+        "borda_score": 41,
+        "average_overall_score": 7.85
+      },
+      "providers": {
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 4,
+          "average_rank": 1.9,
+          "borda_score": 41,
+          "average_overall_score": 7.85
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 3,
+          "average_rank": 2,
+          "borda_score": 40,
+          "average_overall_score": 7.85
+        },
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 3,
+          "average_rank": 2.1,
+          "borda_score": 39,
+          "average_overall_score": 7.73
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 0,
+          "average_rank": 4.1,
+          "borda_score": 19,
+          "average_overall_score": 6.0
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 0,
+          "average_rank": 4.9,
+          "borda_score": 11,
+          "average_overall_score": 4.95
+        }
+      }
+    },
+    {
+      "case_id": "HKgEsdmMFUA-en-to-it",
+      "source_video_id": "HKgEsdmMFUA",
+      "source_video": {
+        "title": "Will AI Friends Help Combat the Loneliness Epidemic? – Mark Zuckerberg",
+        "url": "https://www.youtube.com/watch?v=HKgEsdmMFUA",
+        "speaker_context": "Mark Zuckerberg interview clip",
+        "duration_seconds": 259,
+        "uploader": "Dwarkesh Clips"
+      },
+      "source_language": "English",
+      "target_language": "Italian",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "heygen",
+        "provider_name": "HeyGen",
+        "top1_count": 3,
+        "average_rank": 1.9,
+        "borda_score": 41,
+        "average_overall_score": 8.2
+      },
+      "providers": {
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 3,
+          "average_rank": 1.9,
+          "borda_score": 41,
+          "average_overall_score": 8.2
+        },
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 3,
+          "average_rank": 2.2,
+          "borda_score": 38,
+          "average_overall_score": 8.07
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 3,
+          "average_rank": 2.4,
+          "borda_score": 36,
+          "average_overall_score": 7.88
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 1,
+          "average_rank": 3.8,
+          "borda_score": 22,
+          "average_overall_score": 6.78
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 0,
+          "average_rank": 4.7,
+          "borda_score": 13,
+          "average_overall_score": 5.95
+        }
+      }
+    },
+    {
+      "case_id": "BYXbuik3dgA-en-to-ru",
+      "source_video_id": "BYXbuik3dgA",
+      "source_video": {
+        "title": "Elon Musk – \"In 36 months, the cheapest place to put AI will be space”",
+        "url": "https://www.youtube.com/watch?v=BYXbuik3dgA",
+        "speaker_context": "Elon Musk long-form interview excerpt",
+        "duration_seconds": 10185,
+        "uploader": "Dwarkesh Patel"
+      },
+      "source_language": "English",
+      "target_language": "Russian",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "elevenlabs",
+        "provider_name": "ElevenLabs",
+        "top1_count": 5,
+        "average_rank": 2,
+        "borda_score": 40,
+        "average_overall_score": 8.36
+      },
+      "providers": {
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 5,
+          "average_rank": 2,
+          "borda_score": 40,
+          "average_overall_score": 8.36
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 3,
+          "average_rank": 1.9,
+          "borda_score": 41,
+          "average_overall_score": 8.57
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 1,
+          "average_rank": 3.1,
+          "borda_score": 29,
+          "average_overall_score": 7.17
+        },
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 1,
+          "average_rank": 4.1,
+          "borda_score": 19,
+          "average_overall_score": 6.22
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 0,
+          "average_rank": 3.9,
+          "borda_score": 21,
+          "average_overall_score": 6.35
+        }
+      }
+    },
+    {
+      "case_id": "f4Lj8nucm-A-en-to-ko",
+      "source_video_id": "f4Lj8nucm-A",
+      "source_video": {
+        "title": "China Can Already Train a Model Like Mythos – Jensen Huang",
+        "url": "https://www.youtube.com/watch?v=f4Lj8nucm-A",
+        "speaker_context": "Jensen Huang interview clip",
+        "duration_seconds": 741,
+        "uploader": "Dwarkesh Clips"
+      },
+      "source_language": "English",
+      "target_language": "Korean",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "elevenlabs",
+        "provider_name": "ElevenLabs",
+        "top1_count": 6,
+        "average_rank": 1.7,
+        "borda_score": 43,
+        "average_overall_score": 5.37
+      },
+      "providers": {
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 6,
+          "average_rank": 1.7,
+          "borda_score": 43,
+          "average_overall_score": 5.37
+        },
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 1,
+          "average_rank": 2.6,
+          "borda_score": 34,
+          "average_overall_score": 4.99
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 1,
+          "average_rank": 2.6,
+          "borda_score": 34,
+          "average_overall_score": 4.99
+        },
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 1,
+          "average_rank": 3.5,
+          "borda_score": 25,
+          "average_overall_score": 4.6
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 1,
+          "average_rank": 4.6,
+          "borda_score": 14,
+          "average_overall_score": 3.85
+        }
+      }
+    },
+    {
+      "case_id": "hw7kVyxaPD0-es-to-en",
+      "source_video_id": "hw7kVyxaPD0",
+      "source_video": {
+        "title": "Trabajadores de datos: el costo humano de la inteligencia",
+        "url": "https://www.youtube.com/watch?v=hw7kVyxaPD0",
+        "speaker_context": "DW Espanol source clip",
+        "duration_seconds": 746,
+        "uploader": "DW Español"
+      },
+      "source_language": "Spanish",
+      "target_language": "English",
+      "clip_range": "00:00-01:00",
+      "model": "gemini-3.1-flash-lite-preview",
+      "rounds": 10,
+      "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+      "winner": {
+        "provider_key": "rask",
+        "provider_name": "Rask",
+        "top1_count": 5,
+        "average_rank": 2,
+        "borda_score": 40,
+        "average_overall_score": 8.54
+      },
+      "providers": {
+        "rask": {
+          "provider_name": "Rask",
+          "top1_count": 5,
+          "average_rank": 2,
+          "borda_score": 40,
+          "average_overall_score": 8.54
+        },
+        "heygen": {
+          "provider_name": "HeyGen",
+          "top1_count": 3,
+          "average_rank": 2.8,
+          "borda_score": 32,
+          "average_overall_score": 8.02
+        },
+        "elevenlabs": {
+          "provider_name": "ElevenLabs",
+          "top1_count": 2,
+          "average_rank": 2.7,
+          "borda_score": 33,
+          "average_overall_score": 7.84
+        },
+        "croon": {
+          "provider_name": "CROON",
+          "top1_count": 0,
+          "average_rank": 3.4,
+          "borda_score": 26,
+          "average_overall_score": 7.52
+        },
+        "youtube_auto": {
+          "provider_name": "YouTube Auto-dub",
+          "top1_count": 0,
+          "average_rank": 4.1,
+          "borda_score": 19,
+          "average_overall_score": 6.83
+        }
+      }
+    }
+  ],
+  "notes": [
+    "The source video and dubbed candidate media are not redistributed in this repository.",
+    "Each evaluation request included the original source clip plus five anonymous candidate dubs for the same 00:00-01:00 range.",
+    "Candidates were shuffled in every round and exposed to the model only as Candidate A through Candidate E.",
+    "Provider names and original filenames were not included in the prompt."
+  ]
+}

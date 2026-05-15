@@ -1,0 +1,572 @@
+{
+  "case": {
+    "case_id": "VQHBjfJIQMA-en-to-ja",
+    "source_video_id": "VQHBjfJIQMA",
+    "source_video": {
+      "title": "Self-driving isn't near done – Andrej Karpathy",
+      "url": "https://www.youtube.com/watch?v=VQHBjfJIQMA",
+      "speaker_context": "Andrej Karpathy interview clip",
+      "duration_seconds": 217,
+      "uploader": "Dwarkesh Clips"
+    },
+    "source_language": "English",
+    "target_language": "Japanese",
+    "clip_range": "00:00-01:00",
+    "model": "gemini-3.1-flash-lite-preview",
+    "rounds": 10,
+    "evaluation_mode": "relative shuffled ranking; source + five anonymous candidates per request",
+    "winner": {
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "top1_count": 7,
+      "average_rank": 1.6,
+      "borda_score": 44,
+      "average_overall_score": 8.26
+    },
+    "providers": {
+      "croon": {
+        "provider_name": "CROON",
+        "blind_label": "s04",
+        "top1_count": 7,
+        "average_rank": 1.6,
+        "borda_score": 44,
+        "average_overall_score": 8.26
+      },
+      "heygen": {
+        "provider_name": "HeyGen",
+        "blind_label": "s02",
+        "top1_count": 2,
+        "average_rank": 3,
+        "borda_score": 30,
+        "average_overall_score": 7.04
+      },
+      "rask": {
+        "provider_name": "Rask",
+        "blind_label": "s03",
+        "top1_count": 1,
+        "average_rank": 3.6,
+        "borda_score": 24,
+        "average_overall_score": 6.62
+      },
+      "youtube_auto": {
+        "provider_name": "YouTube Auto-dub",
+        "blind_label": "s05",
+        "top1_count": 0,
+        "average_rank": 2.8,
+        "borda_score": 32,
+        "average_overall_score": 7.45
+      },
+      "elevenlabs": {
+        "provider_name": "ElevenLabs",
+        "blind_label": "s01",
+        "top1_count": 0,
+        "average_rank": 4,
+        "borda_score": 20,
+        "average_overall_score": 6.24
+      }
+    }
+  },
+  "ranking_rows": [
+    {
+      "round": 1,
+      "candidate": "Candidate A",
+      "rank": 1,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 9.2,
+      "reason": "Candidate A provides the most natural and accurate translation. The voice quality is high, and the speaker separation is excellent, making it easy to follow the conversation."
+    },
+    {
+      "round": 1,
+      "candidate": "Candidate C",
+      "rank": 2,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 8.5,
+      "reason": "Candidate C is very good, with clear speech and accurate translation. The timing is well-aligned with the original video."
+    },
+    {
+      "round": 1,
+      "candidate": "Candidate B",
+      "rank": 3,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 7.8,
+      "reason": "Candidate B is solid but has some minor issues with timing and naturalness compared to the top two candidates."
+    },
+    {
+      "round": 1,
+      "candidate": "Candidate E",
+      "rank": 4,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 6.5,
+      "reason": "Candidate E is acceptable but feels less natural and has some noticeable issues with voice quality and timing."
+    },
+    {
+      "round": 1,
+      "candidate": "Candidate D",
+      "rank": 5,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 5.5,
+      "reason": "Candidate D has the lowest quality, with robotic-sounding speech and poor timing alignment, making it the least convincing."
+    },
+    {
+      "round": 2,
+      "candidate": "Candidate A",
+      "rank": 1,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 9.2,
+      "reason": "Candidate A provides the most natural and accurate translation. The voices are well-matched to the speakers, and the timing is excellent, making it feel like a professional production."
+    },
+    {
+      "round": 2,
+      "candidate": "Candidate C",
+      "rank": 2,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 8.5,
+      "reason": "Candidate C is very strong, with good translation and natural flow. The voice quality is slightly less convincing than Candidate A, but still very high quality."
+    },
+    {
+      "round": 2,
+      "candidate": "Candidate B",
+      "rank": 3,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 7.5,
+      "reason": "Candidate B is decent but lacks the polish of the top two. The translation is accurate, but the delivery feels slightly less natural."
+    },
+    {
+      "round": 2,
+      "candidate": "Candidate E",
+      "rank": 4,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 6.5,
+      "reason": "Candidate E has some issues with voice consistency and timing. The translation is acceptable, but the overall experience is less immersive."
+    },
+    {
+      "round": 2,
+      "candidate": "Candidate D",
+      "rank": 5,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 5.5,
+      "reason": "Candidate D is the weakest, with noticeable issues in voice quality and timing alignment. It feels less like a professional dub and more like an automated process."
+    },
+    {
+      "round": 3,
+      "candidate": "Candidate C",
+      "rank": 1,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 9.2,
+      "reason": "This candidate provides the most natural and accurate translation. The flow of the conversation is smooth, and the voice quality is high, making it sound like a professional dub."
+    },
+    {
+      "round": 3,
+      "candidate": "Candidate A",
+      "rank": 2,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 8.5,
+      "reason": "Very good translation and natural delivery. The speaker separation is clear, though the timing alignment is slightly less precise than Candidate C."
+    },
+    {
+      "round": 3,
+      "candidate": "Candidate B",
+      "rank": 3,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 7.8,
+      "reason": "The translation is accurate, but the voice quality is slightly robotic in places, and the timing alignment is not as tight as the top two candidates."
+    },
+    {
+      "round": 3,
+      "candidate": "Candidate D",
+      "rank": 4,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 7.0,
+      "reason": "The translation is acceptable, but the delivery feels a bit stiff, and the timing alignment is noticeably off in several parts of the conversation."
+    },
+    {
+      "round": 3,
+      "candidate": "Candidate E",
+      "rank": 5,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 6.0,
+      "reason": "This candidate has significant issues with timing and naturalness. The speech feels rushed and does not align well with the visual cues or the original speaker's pacing."
+    },
+    {
+      "round": 4,
+      "candidate": "Candidate A",
+      "rank": 1,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 9.2,
+      "reason": "Candidate A provides the most natural and accurate translation. The voice quality is high, and the speaker separation is excellent, making it easy to follow the conversation."
+    },
+    {
+      "round": 4,
+      "candidate": "Candidate C",
+      "rank": 2,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 8.5,
+      "reason": "Candidate C is very good, with clear speech and good timing. It is slightly less natural than Candidate A but still very professional."
+    },
+    {
+      "round": 4,
+      "candidate": "Candidate B",
+      "rank": 3,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 7.5,
+      "reason": "Candidate B is decent, but the voice quality is slightly robotic, and the translation is a bit stiff in some places."
+    },
+    {
+      "round": 4,
+      "candidate": "Candidate D",
+      "rank": 4,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 6.5,
+      "reason": "Candidate D has some issues with timing and naturalness. The voice quality is not as good as the top candidates."
+    },
+    {
+      "round": 4,
+      "candidate": "Candidate E",
+      "rank": 5,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 5.5,
+      "reason": "Candidate E has the lowest quality, with noticeable issues in translation accuracy and naturalness. The voice quality is also poor."
+    },
+    {
+      "round": 5,
+      "candidate": "Candidate C",
+      "rank": 1,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 8.5,
+      "reason": "Candidate C provides the most natural and fluent Japanese translation. The tone is professional and conversational, fitting the context of the interview well. The speaker separation is clear, and the timing is generally well-aligned with the original video."
+    },
+    {
+      "round": 5,
+      "candidate": "Candidate A",
+      "rank": 2,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 8.0,
+      "reason": "Candidate A is very close to Candidate C in quality. The translation is accurate and natural. The voice quality is good, though slightly less expressive than Candidate C."
+    },
+    {
+      "round": 5,
+      "candidate": "Candidate B",
+      "rank": 3,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 7.5,
+      "reason": "Candidate B is a solid dub, but the flow is slightly less natural than the top two. The translation is accurate, but some phrasing feels a bit stiff."
+    },
+    {
+      "round": 5,
+      "candidate": "Candidate D",
+      "rank": 4,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 6.5,
+      "reason": "Candidate D has some issues with timing and naturalness. The translation is acceptable, but the delivery feels a bit robotic at times."
+    },
+    {
+      "round": 5,
+      "candidate": "Candidate E",
+      "rank": 5,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 5.5,
+      "reason": "Candidate E has the most noticeable issues with timing and naturalness. The voice quality is less consistent, and the overall delivery feels less professional."
+    },
+    {
+      "round": 6,
+      "candidate": "Candidate B",
+      "rank": 1,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 9.2,
+      "reason": "Candidate B provides the most natural and accurate translation. The voices are distinct and well-matched to the speakers, and the timing is excellent."
+    },
+    {
+      "round": 6,
+      "candidate": "Candidate A",
+      "rank": 2,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 8.8,
+      "reason": "Candidate A is very strong, with good voice quality and natural phrasing. It is slightly less polished than Candidate B in terms of timing."
+    },
+    {
+      "round": 6,
+      "candidate": "Candidate C",
+      "rank": 3,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 8.0,
+      "reason": "Candidate C is a solid dub, but the voice quality is slightly less natural than the top two, and the timing is occasionally off."
+    },
+    {
+      "round": 6,
+      "candidate": "Candidate D",
+      "rank": 4,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 7.0,
+      "reason": "Candidate D has some issues with voice consistency and timing, making it less convincing as a professional dub."
+    },
+    {
+      "round": 6,
+      "candidate": "Candidate E",
+      "rank": 5,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 6.0,
+      "reason": "Candidate E has the poorest timing and the least natural-sounding voice, making it the least effective of the group."
+    },
+    {
+      "round": 7,
+      "candidate": "Candidate A",
+      "rank": 1,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 9.2,
+      "reason": "Candidate A provides the most natural and accurate translation. The voice acting is professional, and the timing is well-synced with the original video."
+    },
+    {
+      "round": 7,
+      "candidate": "Candidate C",
+      "rank": 2,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 8.5,
+      "reason": "Candidate C is very good, with clear speech and good timing, though slightly less natural in flow than Candidate A."
+    },
+    {
+      "round": 7,
+      "candidate": "Candidate D",
+      "rank": 3,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 7.5,
+      "reason": "Candidate D is decent but has some minor issues with voice tone and natural phrasing."
+    },
+    {
+      "round": 7,
+      "candidate": "Candidate E",
+      "rank": 4,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 6.5,
+      "reason": "Candidate E is understandable but lacks the professional polish and natural cadence of the top candidates."
+    },
+    {
+      "round": 7,
+      "candidate": "Candidate B",
+      "rank": 5,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 5.5,
+      "reason": "Candidate B has noticeable issues with voice quality and timing, making it the least convincing of the group."
+    },
+    {
+      "round": 8,
+      "candidate": "Candidate A",
+      "rank": 1,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 9.2,
+      "reason": "Candidate A provides the most natural and accurate translation. The voices are distinct, and the timing is well-aligned with the original video."
+    },
+    {
+      "round": 8,
+      "candidate": "Candidate C",
+      "rank": 2,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 8.5,
+      "reason": "Candidate C is very good, with clear speech and accurate translation, though the voice quality is slightly less natural than Candidate A."
+    },
+    {
+      "round": 8,
+      "candidate": "Candidate D",
+      "rank": 3,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 7.5,
+      "reason": "Candidate D is decent but has some minor issues with timing and natural flow in the Japanese phrasing."
+    },
+    {
+      "round": 8,
+      "candidate": "Candidate B",
+      "rank": 4,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 6.5,
+      "reason": "Candidate B has noticeable issues with voice quality and some awkward phrasing that makes it sound less like a professional dub."
+    },
+    {
+      "round": 8,
+      "candidate": "Candidate E",
+      "rank": 5,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 5.0,
+      "reason": "Candidate E has poor timing alignment and the voice quality is robotic and unnatural, making it the least convincing."
+    },
+    {
+      "round": 9,
+      "candidate": "Candidate B",
+      "rank": 1,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 4.8,
+      "reason": "Candidate B provides the most natural and accurate translation. The voice quality is high, and the timing is excellent, making it the most convincing dub."
+    },
+    {
+      "round": 9,
+      "candidate": "Candidate A",
+      "rank": 2,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 4.5,
+      "reason": "Candidate A is very strong, with good translation and natural flow. It falls slightly behind Candidate B in terms of timing and overall voice consistency."
+    },
+    {
+      "round": 9,
+      "candidate": "Candidate D",
+      "rank": 3,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 4.0,
+      "reason": "Candidate D is solid but lacks the polish of the top two. The translation is accurate, but the delivery feels slightly less natural."
+    },
+    {
+      "round": 9,
+      "candidate": "Candidate C",
+      "rank": 4,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 3.5,
+      "reason": "Candidate C is acceptable but has noticeable issues with voice synthesis quality and occasional awkward phrasing."
+    },
+    {
+      "round": 9,
+      "candidate": "Candidate E",
+      "rank": 5,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 2.5,
+      "reason": "Candidate E has significant issues with translation accuracy and voice naturalness, making it the least convincing of the group."
+    },
+    {
+      "round": 10,
+      "candidate": "Candidate B",
+      "rank": 1,
+      "provider_key": "heygen",
+      "provider_name": "HeyGen",
+      "blind_label": "s02",
+      "overall_score": 9.2,
+      "reason": "Candidate B provides the most natural and accurate translation. The voices are distinct and well-matched to the original speakers, and the timing is excellent."
+    },
+    {
+      "round": 10,
+      "candidate": "Candidate D",
+      "rank": 2,
+      "provider_key": "croon",
+      "provider_name": "CROON",
+      "blind_label": "s04",
+      "overall_score": 8.5,
+      "reason": "Candidate D is very strong, with good translation and natural flow. The voice quality is slightly less convincing than Candidate B."
+    },
+    {
+      "round": 10,
+      "candidate": "Candidate A",
+      "rank": 3,
+      "provider_key": "elevenlabs",
+      "provider_name": "ElevenLabs",
+      "blind_label": "s01",
+      "overall_score": 7.8,
+      "reason": "Candidate A is a solid dub, but the timing is slightly off in a few places, and the voice modulation feels a bit robotic at times."
+    },
+    {
+      "round": 10,
+      "candidate": "Candidate C",
+      "rank": 4,
+      "provider_key": "youtube_auto",
+      "provider_name": "YouTube Auto Dub",
+      "blind_label": "s05",
+      "overall_score": 6.5,
+      "reason": "Candidate C has a noticeable delay in timing and the voice quality is less natural, making it feel more like a synthetic dub."
+    },
+    {
+      "round": 10,
+      "candidate": "Candidate E",
+      "rank": 5,
+      "provider_key": "rask",
+      "provider_name": "Rask AI",
+      "blind_label": "s03",
+      "overall_score": 5.5,
+      "reason": "Candidate E has significant issues with timing and the translation is less accurate, leading to a less coherent viewing experience."
+    }
+  ]
+}
