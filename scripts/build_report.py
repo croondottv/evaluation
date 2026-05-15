@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import html
 import json
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 
@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SUMMARY_PATH = ROOT / "data" / "summary.json"
 OUT_PATH = ROOT / "index.html"
 ROUNDS_INDEX_PATH = ROOT / "data" / "rounds" / "index.html"
+ASSETS_DIR = ROOT / "assets"
+BENCHMARK_SVG_PATH = ASSETS_DIR / "benchmark-chart-wall.svg"
 
 PROVIDER_ORDER = ["croon", "elevenlabs", "heygen", "rask", "youtube_auto"]
 PROVIDER_LABELS = {
@@ -195,45 +197,6 @@ def build_language_chart_wall(cases: list[dict[str, object]]) -> str:
     return "".join(charts)
 
 
-def build_source_chart_wall(cases: list[dict[str, object]]) -> str:
-    grouped: dict[str, list[dict[str, object]]] = defaultdict(list)
-    for case in cases:
-        grouped[str(case["source_video_id"])].append(case)
-
-    charts = []
-    for source_id, source_cases in grouped.items():
-        totals = {key: 0 for key in PROVIDER_ORDER}
-        for case in source_cases:
-            for key in PROVIDER_ORDER:
-                totals[key] += case["providers"][key]["top1_count"]
-        max_value = max(10, len(source_cases) * 10)
-        source = source_cases[0]["source_video"]
-        target_label = ", ".join(str(case["target_language"]) for case in source_cases)
-        values = [(key, PROVIDER_LABELS[key], totals[key], str(totals[key])) for key in PROVIDER_ORDER]
-        title = str(source.get("speaker_context") or source["title"]).split(" - ")[0].split(" – ")[0]
-        charts.append(mini_chart(title, f"{target_label} / source video aggregate", values, max_value))
-    return "".join(charts)
-
-
-def build_criteria_chart_wall(summary: dict[str, object]) -> str:
-    criteria = list(summary.get("criteria") or [])
-    criteria.append({"key": "overall_score", "label": "Overall score"})
-    charts = []
-    for item in criteria:
-        key = item["key"]
-        values = []
-        for provider_key in PROVIDER_ORDER:
-            scores = [
-                float(case["providers"][provider_key]["criteria_averages"][key])
-                for case in summary["cases"]
-                if "criteria_averages" in case["providers"][provider_key]
-            ]
-            average = sum(scores) / len(scores)
-            values.append((provider_key, PROVIDER_LABELS[provider_key], average, f"{average:.1f}"))
-        charts.append(mini_chart(str(item["label"]), "Average model score out of 10", values, 10))
-    return "".join(charts)
-
-
 def build_source_rows(cases: list[dict[str, object]]) -> str:
     rows = []
     seen: set[str] = set()
@@ -256,6 +219,77 @@ def build_source_rows(cases: list[dict[str, object]]) -> str:
     return "".join(rows)
 
 
+def svg_text(text: object) -> str:
+    return html.escape(str(text), quote=False)
+
+
+def render_benchmark_svg(summary: dict[str, object]) -> str:
+    cases = summary["cases"]
+    width = 1200
+    height = 760
+    margin_x = 44
+    top = 118
+    card_w = 206
+    card_h = 256
+    gap_x = 24
+    gap_y = 28
+    chart_w = card_w - 44
+    chart_h = 124
+    bar_w = 22
+    bar_gap = 14
+
+    legend_items = []
+    legend_x = 66
+    for key in PROVIDER_ORDER:
+        legend_items.append(
+            f'<g transform="translate({legend_x},40)">'
+            f'<rect width="18" height="18" rx="4" fill="{COLORS[key]}"/>'
+            f'<text x="28" y="14" fill="#f5efe8" font-size="17" font-weight="700">{svg_text(PROVIDER_LABELS[key])}</text>'
+            f"</g>"
+        )
+        legend_x += 210 if key != "youtube_auto" else 0
+
+    chart_groups = []
+    for index, case in enumerate(cases):
+        col = index % 5
+        row = index // 5
+        x = margin_x + col * (card_w + gap_x)
+        y = top + row * (card_h + gap_y)
+        bars = []
+        start_x = 28
+        baseline = 164
+        for provider_index, key in enumerate(PROVIDER_ORDER):
+            value = int(case["providers"][key]["top1_count"])
+            bar_h = max(3, round((value / 10) * chart_h))
+            bx = start_x + provider_index * (bar_w + bar_gap)
+            by = baseline - bar_h
+            bars.append(
+                f'<text x="{bx + bar_w / 2}" y="24" text-anchor="middle" fill="#f5efe8" font-size="14" font-weight="800">{value}</text>'
+                f'<rect x="{bx}" y="{baseline - chart_h}" width="{bar_w}" height="{chart_h}" rx="5" fill="#242424"/>'
+                f'<rect x="{bx}" y="{by}" width="{bar_w}" height="{bar_h}" rx="5" fill="{COLORS[key]}"/>'
+                f'<text x="{bx + bar_w / 2}" y="{baseline + 20}" text-anchor="middle" fill="#b9b2aa" font-size="10" font-weight="700">{svg_text(PROVIDER_SHORT_LABELS[key])}</text>'
+            )
+        chart_groups.append(
+            f"""
+    <g transform="translate({x},{y})">
+      <rect width="{card_w}" height="{card_h}" rx="8" fill="#0e0e0f" stroke="#29313b"/>
+      {''.join(bars)}
+      <text x="{card_w / 2}" y="206" text-anchor="middle" fill="#ffffff" font-size="21" font-weight="850">{svg_text(case['target_language'])}</text>
+      <text x="{card_w / 2}" y="232" text-anchor="middle" fill="#a99f96" font-size="13">{svg_text(case['source_language'])} to {svg_text(case['target_language'])} / top-1 votes</text>
+    </g>"""
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="CROON dubbing benchmark chart wall">
+  <rect width="100%" height="100%" fill="#050506"/>
+  <text x="44" y="34" fill="#ff7a1a" font-size="15" font-weight="850" letter-spacing="2">DUBBING EVALUATION BENCHMARK</text>
+  {''.join(legend_items)}
+  <text x="44" y="96" fill="#f5efe8" font-size="22" font-weight="800">Benchmark chart wall</text>
+  <text x="308" y="96" fill="#a99f96" font-size="16">Top-1 votes across 10 shuffled anonymous rounds per target language</text>
+  {''.join(chart_groups)}
+</svg>
+"""
+
+
 def render() -> str:
     summary = load_summary()
     cases = summary["cases"]
@@ -263,8 +297,6 @@ def render() -> str:
     language_cards = build_language_cards(cases)
     win_rows, vote_rows = build_leaderboard(summary)
     language_chart_wall = build_language_chart_wall(cases)
-    source_chart_wall = build_source_chart_wall(cases)
-    criteria_chart_wall = build_criteria_chart_wall(summary)
     provider_legend = build_provider_legend()
     source_rows = build_source_rows(cases)
     croon_win_languages = ", ".join(case["target_language"] for case in croon_wins)
@@ -330,8 +362,6 @@ def render() -> str:
     .legend-item em {{ font-style: normal; color: var(--muted); font-size: 12px; }}
     .chart-wall {{ display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }}
     .chart-wall > * {{ min-width: 0; }}
-    .chart-wall.source-wall {{ grid-template-columns: repeat(5, minmax(0, 1fr)); }}
-    .chart-wall.criteria-wall {{ grid-template-columns: repeat(3, minmax(0, 1fr)); }}
     .mini-chart {{ background: #11100f; color: #f8f1e9; border: 1px solid rgba(255,255,255,.10); border-radius: 8px; padding: 15px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }}
     .mini-bars {{ display: flex; justify-content: space-between; gap: 6px; align-items: end; min-height: 130px; min-width: 0; }}
     .mini-bar-cell {{ flex: 0 1 18%; max-width: 18%; min-width: 0; overflow:hidden; display:flex; flex-direction:column; align-items:center; gap: 6px; }}
@@ -374,7 +404,7 @@ def render() -> str:
     tr:last-child td {{ border-bottom: 0; }}
     footer {{ color: var(--muted); padding: 30px 0 60px; }}
     @media (max-width: 960px) {{
-      .hero-grid, .two-col, .grid, .flow, .guard-grid, .chart-wall, .chart-wall.source-wall, .chart-wall.criteria-wall {{ grid-template-columns: 1fr; }}
+      .hero-grid, .two-col, .grid, .flow, .guard-grid, .chart-wall {{ grid-template-columns: 1fr; }}
       .section-head {{ display:block; }}
       .note {{ margin-top: 10px; }}
       .metrics {{ grid-template-columns: 1fr; }}
@@ -444,18 +474,6 @@ def render() -> str:
     </div>
     {provider_legend}
     <section class="chart-wall">{language_chart_wall}</section>
-
-    <div class="section-head">
-      <h2>Video-level view</h2>
-      <p class="note">When one source video has multiple target languages, scores are aggregated across those language runs.</p>
-    </div>
-    <section class="chart-wall source-wall">{source_chart_wall}</section>
-
-    <div class="section-head">
-      <h2>Quality dimensions</h2>
-      <p class="note">Gemini scored each candidate on translation, naturalness, voice match, speaker separation, timing alignment, and overall quality.</p>
-    </div>
-    <section class="chart-wall criteria-wall">{criteria_chart_wall}</section>
 
     <div class="section-head">
       <h2>Evidence by language</h2>
@@ -571,8 +589,11 @@ def render_rounds_index(summary: dict[str, object]) -> str:
 
 def main() -> None:
     summary = load_summary()
+    ASSETS_DIR.mkdir(exist_ok=True)
+    BENCHMARK_SVG_PATH.write_text(render_benchmark_svg(summary), encoding="utf-8")
     OUT_PATH.write_text(render(), encoding="utf-8")
     ROUNDS_INDEX_PATH.write_text(render_rounds_index(summary), encoding="utf-8")
+    print(f"Wrote {BENCHMARK_SVG_PATH}")
     print(f"Wrote {OUT_PATH}")
     print(f"Wrote {ROUNDS_INDEX_PATH}")
 

@@ -1,99 +1,46 @@
 # CROON Dubbing Evaluation
 
-Public benchmark report for AI video dubbing quality.
+CROON ranked #1 in 5 of 10 target languages in a shuffled anonymous Gemini dubbing benchmark.
 
-CROON ranked #1 by top-1 votes in 5 of 10 target languages: Japanese, French, Portuguese, Chinese, Spanish.
+![Benchmark chart wall](assets/benchmark-chart-wall.svg)
 
-Visual report: https://croondottv.github.io/evaluation/
+## Result
 
-## What this repository shows
+- CROON won: Japanese, French, Portuguese, Chinese, Spanish
+- Compared against: ElevenLabs, HeyGen, Rask, YouTube Auto-dub
+- Metric: top-1 votes across 10 shuffled anonymous rounds per language
+- Clip: first 60 seconds of each source video
 
-This repository is intended to make the benchmark understandable and inspectable:
+Full report: https://croondottv.github.io/evaluation/
 
-- what ranking was measured
-- which providers and languages were compared
-- what the result was
-- how the evaluation avoided obvious provider bias
-- which raw result rows support the charts
-- how to rerun the same method with local media files
+## Method
 
-## Headline result
+Each evaluation round uses:
 
-| Provider | Languages won | Top-1 votes |
-| --- | ---: | ---: |
-| CROON | 5 / 10 | 34 / 100 |
-| Rask | 2 / 10 | 25 / 100 |
-| ElevenLabs | 2 / 10 | 17 / 100 |
-| HeyGen | 1 / 10 | 21 / 100 |
-| YouTube Auto-dub | 0 / 10 | 3 / 100 |
+- one original source clip
+- five dubbed candidates for the same `00:00-01:00` range
+- anonymous labels, Candidate A through Candidate E
+- shuffled candidate order
+- Gemini ranking by dubbing quality
 
-`Languages won` counts the target languages where a provider received the most #1 rankings. `Top-1 votes` counts all first-place rankings across the 10 languages and 10 shuffled rounds per language.
+The prompt asks Gemini to judge translation accuracy, spoken naturalness, voice similarity, speaker separation, and timing alignment. It explicitly says not to reward video resolution or bitrate.
 
-## Language winners
+## Reproduce
 
-| Target language | Winner | Top-1 votes |
-| --- | --- | ---: |
-| Japanese | CROON | 7 / 10 |
-| French | CROON | 5 / 10 |
-| Portuguese | CROON | 5 / 10 |
-| Chinese | CROON | 5 / 10 |
-| Spanish | CROON | 4 / 10 |
-| German | Rask | 4 / 10 |
-| Italian | HeyGen | 3 / 10 |
-| Russian | ElevenLabs | 5 / 10 |
-| Korean | ElevenLabs | 6 / 10 |
-| English | Rask | 5 / 10 |
+Prepare these local files for each benchmark case:
 
-## Method summary
+| File | Description |
+| --- | --- |
+| Source clip | Original source video, first 60 seconds |
+| CROON output | Dubbed output for the same range |
+| ElevenLabs output | Dubbed output for the same range |
+| HeyGen output | Dubbed output for the same range |
+| Rask output | Dubbed output for the same range |
+| YouTube Auto-dub | YouTube dubbed audio/video for the same range |
 
-- Model: `gemini-3.1-flash-lite-preview`
-- Providers: CROON, ElevenLabs, HeyGen, Rask, YouTube Auto-dub
-- Target languages: 10
-- Clip range: first 60 seconds, `00:00-01:00`
-- Rounds: 10 shuffled rounds per language
-- Input per round: source clip plus five anonymous dubbed candidates
-- Primary metric: top-1 votes
-
-The model was asked to rank the five anonymous candidates for dubbing quality only. The prompt explicitly says not to reward video resolution or bitrate.
-
-## Why the comparison is reasonably fair
-
-The benchmark is not a human listening study, but it includes controls that make the result more reliable than a single absolute score:
-
-- Candidate labels were anonymous: Candidate A through Candidate E.
-- Candidate order was shuffled every round.
-- The source video was included in every request.
-- Every provider was evaluated on the same `00:00-01:00` range.
-- Provider names and original filenames were not included in prompts.
-- The scoring prompt excludes video resolution and bitrate.
-- Raw per-round ranking rows are published in `data/rounds/`.
-
-## Repository structure
-
-```text
-index.html                         Static visual report
-methodology.md                     Full method, prompt, controls, limitations
-data/summary.json                  Normalized aggregate data
-data/rounds/*.json                 Per-language raw ranking rows
-data/README.md                     Data dictionary
-scripts/build_report.py            Regenerates index.html from data/summary.json
-scripts/evaluate_relative_ranking.py
-                                   Runs the shuffled Gemini ranking method
-examples/manifest.example.json     Example manifest for local reproduction
-```
-
-## Reproduce with local media
-
-The source and dubbed media files are not committed. To rerun the benchmark, prepare local 60-second clips for the source and five candidates, then fill a manifest using `examples/manifest.example.json`.
+Then fill `examples/manifest.example.json` and run:
 
 ```bash
-python3 -m venv .venv
-. .venv/bin/activate
-pip install google-genai
-
-export GOOGLE_CLOUD_PROJECT=your-project-id
-export GOOGLE_CLOUD_LOCATION=global
-
 python3 scripts/evaluate_relative_ranking.py \
   --manifest examples/manifest.example.json \
   --out runs/example \
@@ -101,19 +48,4 @@ python3 scripts/evaluate_relative_ranking.py \
   --seed 760
 ```
 
-To rebuild the static report after editing `data/summary.json`:
-
-```bash
-python3 scripts/build_report.py
-```
-
-## What is not included
-
-Video files are not redistributed. The report links to the public YouTube source videos and states that only the first 60 seconds were evaluated.
-
-## Limitations
-
-- This is a model-based evaluation, not a substitute for a blinded human panel.
-- It covers the selected first-minute clips, not all genres and accents.
-- It compares the providers' generated outputs available for this run.
-- The primary claim is based on top-1 vote count, with average rank and Borda score included as secondary evidence.
+Raw ranking rows are in `data/rounds/`. The source and dubbed media files are not redistributed in this repository.
