@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "case_id": "example-en-to-ja",
+      "source_language": "English",
+      "target_language": "Japanese",
+      "clip_range": "00:00-01:00",
+      "source_path": "media/example/source-000-060.mp4",
+      "candidates": [
+        {
+          "provider_key": "croon",
+          "provider_name": "CROON",
+          "path": "media/example/croon-000-060.mp4"
+        },
+        {
+          "provider_key": "elevenlabs",
+          "provider_name": "ElevenLabs",
+          "path": "media/example/elevenlabs-000-060.mp4"
+        },
+        {
+          "provider_key": "heygen",
+          "provider_name": "HeyGen",
+          "path": "media/example/heygen-000-060.mp4"
+        },
+        {
+          "provider_key": "rask",
+          "provider_name": "Rask",
+          "path": "media/example/rask-000-060.mp4"
+        },
+        {
+          "provider_key": "youtube_auto",
+          "provider_name": "YouTube Auto-dub",
+          "path": "media/example/youtube-auto-dub-000-060.webm"
+        }
+      ]
+    }
+  ]
+}

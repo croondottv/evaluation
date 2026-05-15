@@ -29,35 +29,75 @@
         "top1_count": 5,
         "average_rank": 1.7,
         "borda_score": 43,
-        "average_overall_score": 8.26
+        "average_overall_score": 8.26,
+        "criteria_averages": {
+          "translation_accuracy": 8.5,
+          "spoken_naturalness": 8.2,
+          "voice_similarity": 8.1,
+          "speaker_separation": 8.35,
+          "timing_alignment": 8.15,
+          "overall_score": 8.26
+        }
       },
       "rask": {
         "provider_name": "Rask",
         "top1_count": 4,
         "average_rank": 1.7,
         "borda_score": 43,
-        "average_overall_score": 8.22
+        "average_overall_score": 8.22,
+        "criteria_averages": {
+          "translation_accuracy": 8.5,
+          "spoken_naturalness": 8.1,
+          "voice_similarity": 8.15,
+          "speaker_separation": 8.3,
+          "timing_alignment": 8.15,
+          "overall_score": 8.22
+        }
       },
       "heygen": {
         "provider_name": "HeyGen",
         "top1_count": 1,
         "average_rank": 2.8,
         "borda_score": 32,
-        "average_overall_score": 7.49
+        "average_overall_score": 7.49,
+        "criteria_averages": {
+          "translation_accuracy": 7.9,
+          "spoken_naturalness": 7.5,
+          "voice_similarity": 7.45,
+          "speaker_separation": 7.5,
+          "timing_alignment": 7.15,
+          "overall_score": 7.49
+        }
       },
       "elevenlabs": {
         "provider_name": "ElevenLabs",
         "top1_count": 0,
         "average_rank": 4.3,
         "borda_score": 17,
-        "average_overall_score": 5.63
+        "average_overall_score": 5.63,
+        "criteria_averages": {
+          "translation_accuracy": 6.1,
+          "spoken_naturalness": 5.6,
+          "voice_similarity": 5.55,
+          "speaker_separation": 5.55,
+          "timing_alignment": 5.25,
+          "overall_score": 5.63
+        }
       },
       "youtube_auto": {
         "provider_name": "YouTube Auto-dub",
         "top1_count": 0,
         "average_rank": 4.5,
         "borda_score": 15,
-        "average_overall_score": 5.75
+        "average_overall_score": 5.75,
+        "criteria_averages": {
+          "translation_accuracy": 6.25,
+          "spoken_naturalness": 5.65,
+          "voice_similarity": 5.7,
+          "speaker_separation": 5.65,
+          "timing_alignment": 5.5,
+          "overall_score": 5.75
+        }
       }
     }
   },
@@ -70,6 +110,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 9.2,
+      "translation_accuracy": 9.5,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.5,
+      "timing_alignment": 9.0,
       "reason": "Candidate B provides the most natural and accurate translation. The flow of speech is very conversational and matches the speaker's intent perfectly. The voice quality is high and the timing is excellent."
     },
     {
@@ -80,6 +125,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 8.8,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 8.5,
+      "speaker_separation": 9.0,
+      "timing_alignment": 9.0,
       "reason": "Candidate C is very close to Candidate B in quality. The translation is accurate and the timing is well-aligned. It feels slightly less natural in some phrasing compared to B."
     },
     {
@@ -90,6 +140,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 8.0,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.0,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 7.5,
       "reason": "Candidate D is a solid dub, but the timing alignment is slightly off in a few places, making it feel less like a professional production compared to the top two."
     },
     {
@@ -100,6 +155,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 6.5,
+      "translation_accuracy": 7.0,
+      "spoken_naturalness": 6.5,
+      "voice_similarity": 6.0,
+      "speaker_separation": 6.5,
+      "timing_alignment": 6.5,
       "reason": "Candidate A has some awkward phrasing and the voice quality is less consistent. The translation is acceptable but lacks the nuance of the higher-ranked candidates."
     },
     {
@@ -110,6 +170,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 5.0,
+      "translation_accuracy": 6.0,
+      "spoken_naturalness": 5.0,
+      "voice_similarity": 4.5,
+      "speaker_separation": 5.0,
+      "timing_alignment": 4.5,
       "reason": "Candidate E suffers from poor timing alignment and a less natural-sounding voice. The translation is functional but lacks the conversational flow required for a high-quality dub."
     },
     {
@@ -120,6 +185,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 9.2,
+      "translation_accuracy": 9.5,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.5,
+      "timing_alignment": 9.0,
       "reason": "Candidate B provides the most natural and fluent French translation. The voice is well-matched to the speaker, and the timing and pacing are excellent, making it feel like a professional dub."
     },
     {
@@ -130,6 +200,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 8.8,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 8.5,
+      "speaker_separation": 9.0,
+      "timing_alignment": 9.0,
       "reason": "Candidate D is very close to Candidate B in quality. The translation is accurate and the timing is good, though the voice quality is slightly less natural."
     },
     {
@@ -140,6 +215,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 8.0,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.0,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 7.5,
       "reason": "Candidate E is a solid dub, but the timing alignment is slightly off in a few places, and the voice quality is a bit robotic compared to the top two."
     },
     {
@@ -150,6 +230,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 6.5,
+      "translation_accuracy": 7.0,
+      "spoken_naturalness": 6.0,
+      "voice_similarity": 6.5,
+      "speaker_separation": 6.5,
+      "timing_alignment": 6.5,
       "reason": "Candidate A has some issues with translation flow and the voice sounds a bit unnatural. The timing is also inconsistent."
     },
     {
@@ -160,6 +245,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 5.0,
+      "translation_accuracy": 5.0,
+      "spoken_naturalness": 5.0,
+      "voice_similarity": 5.0,
+      "speaker_separation": 5.0,
+      "timing_alignment": 5.0,
       "reason": "Candidate C is the weakest, with poor translation accuracy and unnatural phrasing. The voice quality is also quite poor."
     },
     {
@@ -170,6 +260,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 4.5,
+      "translation_accuracy": 5.0,
+      "spoken_naturalness": 4.5,
+      "voice_similarity": 4.0,
+      "speaker_separation": 5.0,
+      "timing_alignment": 4.5,
       "reason": "This candidate provides the most natural and accurate translation. The flow is smooth and the tone matches the original speaker well."
     },
     {
@@ -180,6 +275,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 4.2,
+      "translation_accuracy": 4.5,
+      "spoken_naturalness": 4.0,
+      "voice_similarity": 4.0,
+      "speaker_separation": 4.5,
+      "timing_alignment": 4.0,
       "reason": "Very good translation and natural delivery, though slightly less fluid than Candidate C."
     },
     {
@@ -190,6 +290,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 3.8,
+      "translation_accuracy": 4.0,
+      "spoken_naturalness": 3.5,
+      "voice_similarity": 4.0,
+      "speaker_separation": 4.0,
+      "timing_alignment": 3.5,
       "reason": "The translation is accurate, but the delivery feels a bit robotic in places, affecting the naturalness."
     },
     {
@@ -200,6 +305,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 3.5,
+      "translation_accuracy": 3.5,
+      "spoken_naturalness": 3.5,
+      "voice_similarity": 3.5,
+      "speaker_separation": 3.5,
+      "timing_alignment": 3.5,
       "reason": "The dubbing is acceptable but lacks the nuance and natural rhythm of the top candidates."
     },
     {
@@ -210,6 +320,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 2.5,
+      "translation_accuracy": 3.0,
+      "spoken_naturalness": 2.5,
+      "voice_similarity": 2.5,
+      "speaker_separation": 2.0,
+      "timing_alignment": 2.5,
       "reason": "The translation is somewhat disjointed and the delivery feels unnatural, making it the least convincing."
     },
     {
@@ -220,6 +335,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 9.2,
+      "translation_accuracy": 9.5,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.5,
+      "timing_alignment": 9.0,
       "reason": "This candidate provides the most natural and accurate translation. The voice is well-suited to the speaker, and the pacing is excellent, making it feel like a professional dub."
     },
     {
@@ -230,6 +350,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 8.8,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.0,
+      "timing_alignment": 8.5,
       "reason": "Very high quality, with a natural flow and good voice matching. It is slightly less polished than Candidate C in terms of timing, but still very convincing."
     },
     {
@@ -240,6 +365,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 8.0,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.0,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 7.5,
       "reason": "Good translation and natural delivery, but the voice quality is slightly less consistent with the original speaker's tone compared to the top two."
     },
     {
@@ -250,6 +380,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 7.0,
+      "translation_accuracy": 7.5,
+      "spoken_naturalness": 7.0,
+      "voice_similarity": 7.0,
+      "speaker_separation": 7.0,
+      "timing_alignment": 6.5,
       "reason": "The translation is acceptable, but the delivery feels a bit robotic and lacks the nuance of the original speaker's intent."
     },
     {
@@ -260,6 +395,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 5.5,
+      "translation_accuracy": 6.0,
+      "spoken_naturalness": 5.5,
+      "voice_similarity": 5.0,
+      "speaker_separation": 5.0,
+      "timing_alignment": 5.0,
       "reason": "This candidate has noticeable issues with timing and voice quality. The translation is less accurate, and the overall production feels less professional."
     },
     {
@@ -270,6 +410,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 8.5,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 8.0,
+      "speaker_separation": 9.0,
+      "timing_alignment": 8.0,
       "reason": "Candidate B provides the most natural and accurate translation. The flow of speech is very good, and the tone is appropriate for the context."
     },
     {
@@ -280,6 +425,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 8.0,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.0,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 8.0,
       "reason": "Candidate D is very close to Candidate B in quality, with a slightly less natural cadence in some parts, but still very professional."
     },
     {
@@ -290,6 +440,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 7.5,
+      "translation_accuracy": 8.0,
+      "spoken_naturalness": 7.5,
+      "voice_similarity": 7.5,
+      "speaker_separation": 7.5,
+      "timing_alignment": 7.0,
       "reason": "Candidate A is good but has some minor issues with timing and naturalness compared to the top two candidates."
     },
     {
@@ -300,6 +455,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 6.0,
+      "translation_accuracy": 7.0,
+      "spoken_naturalness": 6.0,
+      "voice_similarity": 6.0,
+      "speaker_separation": 6.0,
+      "timing_alignment": 5.0,
       "reason": "Candidate C has noticeable issues with timing and the voice quality is less consistent, making it feel less like a professional dub."
     },
     {
@@ -310,6 +470,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 5.0,
+      "translation_accuracy": 6.0,
+      "spoken_naturalness": 5.0,
+      "voice_similarity": 5.0,
+      "speaker_separation": 5.0,
+      "timing_alignment": 4.0,
       "reason": "Candidate E has significant issues with timing and the translation feels less natural and accurate than the others."
     },
     {
@@ -320,6 +485,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 9.0,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.0,
+      "timing_alignment": 9.0,
       "reason": "Candidate A provides the most natural and accurate translation. The voice is well-matched to the speaker, and the timing is excellent, making it the most convincing dub."
     },
     {
@@ -330,6 +500,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 8.5,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 8.5,
+      "speaker_separation": 8.5,
+      "timing_alignment": 8.5,
       "reason": "Candidate E is very close to Candidate A in quality, with a natural flow and good timing, though slightly less precise in some phrasing."
     },
     {
@@ -340,6 +515,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 7.5,
+      "translation_accuracy": 7.5,
+      "spoken_naturalness": 7.5,
+      "voice_similarity": 7.5,
+      "speaker_separation": 7.5,
+      "timing_alignment": 7.5,
       "reason": "Candidate C is good but has some minor issues with timing and naturalness compared to the top two candidates."
     },
     {
@@ -350,6 +530,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 6.0,
+      "translation_accuracy": 6.0,
+      "spoken_naturalness": 6.0,
+      "voice_similarity": 6.0,
+      "speaker_separation": 6.0,
+      "timing_alignment": 6.0,
       "reason": "Candidate D has noticeable issues with timing and the voice quality is less natural, making it feel more like a machine-generated dub."
     },
     {
@@ -360,6 +545,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 5.0,
+      "translation_accuracy": 5.0,
+      "spoken_naturalness": 5.0,
+      "voice_similarity": 5.0,
+      "speaker_separation": 5.0,
+      "timing_alignment": 5.0,
       "reason": "Candidate B has significant issues with timing and the translation feels less natural and less accurate than the other candidates."
     },
     {
@@ -370,6 +560,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 9.2,
+      "translation_accuracy": 9.5,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.5,
+      "timing_alignment": 9.0,
       "reason": "Candidate A provides the most natural and accurate translation. The flow of speech is excellent, and the voice quality is very high, making it sound like a professional dub."
     },
     {
@@ -380,6 +575,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 8.5,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 8.5,
+      "speaker_separation": 8.5,
+      "timing_alignment": 8.5,
       "reason": "Candidate C is very strong, with good translation and natural phrasing. It is slightly less polished than Candidate A but still very convincing."
     },
     {
@@ -390,6 +590,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 7.8,
+      "translation_accuracy": 8.0,
+      "spoken_naturalness": 7.5,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 7.5,
       "reason": "Candidate E is a solid performance, though the pacing feels a bit rushed in some parts, which slightly impacts the naturalness."
     },
     {
@@ -400,6 +605,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 6.5,
+      "translation_accuracy": 7.0,
+      "spoken_naturalness": 6.0,
+      "voice_similarity": 6.5,
+      "speaker_separation": 6.5,
+      "timing_alignment": 6.5,
       "reason": "Candidate B has some awkward phrasing and the voice quality is less consistent, making it feel less like a professional production."
     },
     {
@@ -410,6 +620,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 5.0,
+      "translation_accuracy": 5.5,
+      "spoken_naturalness": 5.0,
+      "voice_similarity": 5.0,
+      "speaker_separation": 5.0,
+      "timing_alignment": 4.5,
       "reason": "Candidate D struggles with timing and the translation feels a bit disjointed, making it the least natural of the group."
     },
     {
@@ -420,6 +635,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 9.2,
+      "translation_accuracy": 9.5,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.5,
+      "timing_alignment": 9.0,
       "reason": "This candidate provides the most natural and accurate translation. The voice is well-suited to the speaker, and the pacing is excellent."
     },
     {
@@ -430,6 +650,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 8.8,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 9.0,
+      "speaker_separation": 9.0,
+      "timing_alignment": 8.5,
       "reason": "Very high quality, with good translation and natural flow. The voice is a good match, though slightly less dynamic than Candidate B."
     },
     {
@@ -440,6 +665,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 8.0,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.0,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 7.5,
       "reason": "Good translation, but the voice quality is slightly less natural and the timing is occasionally off."
     },
     {
@@ -450,6 +680,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 7.5,
+      "translation_accuracy": 8.0,
+      "spoken_naturalness": 7.5,
+      "voice_similarity": 7.5,
+      "speaker_separation": 7.5,
+      "timing_alignment": 7.0,
       "reason": "The translation is accurate, but the delivery feels a bit robotic and the timing is not as precise as the top candidates."
     },
     {
@@ -460,6 +695,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 6.5,
+      "translation_accuracy": 7.0,
+      "spoken_naturalness": 6.5,
+      "voice_similarity": 6.5,
+      "speaker_separation": 6.5,
+      "timing_alignment": 6.0,
       "reason": "The translation is acceptable, but the voice quality is poor and the timing is noticeably misaligned."
     },
     {
@@ -470,6 +710,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 9.2,
+      "translation_accuracy": 9.5,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 9.5,
+      "speaker_separation": 9.0,
+      "timing_alignment": 9.0,
       "reason": "This candidate provides the most natural and accurate translation. The voice is very similar to the original speaker, and the timing is excellent."
     },
     {
@@ -480,6 +725,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 8.8,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 9.0,
+      "speaker_separation": 8.5,
+      "timing_alignment": 9.0,
       "reason": "Very high quality, with good translation and natural flow. The voice is a good match, though slightly less convincing than Candidate D."
     },
     {
@@ -490,6 +740,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 8.0,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.0,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 7.5,
       "reason": "Good overall quality, but the timing is slightly off in a few places, and the voice is not as perfectly matched as the top two."
     },
     {
@@ -500,6 +755,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 7.0,
+      "translation_accuracy": 7.5,
+      "spoken_naturalness": 7.0,
+      "voice_similarity": 7.0,
+      "speaker_separation": 6.5,
+      "timing_alignment": 7.0,
       "reason": "The translation is acceptable, but the voice quality is less natural and the timing feels a bit forced."
     },
     {
@@ -510,6 +770,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 6.0,
+      "translation_accuracy": 6.5,
+      "spoken_naturalness": 6.0,
+      "voice_similarity": 6.0,
+      "speaker_separation": 5.5,
+      "timing_alignment": 6.0,
       "reason": "This candidate has the poorest timing and the least natural-sounding voice. The translation is also less accurate than the others."
     },
     {
@@ -520,6 +785,11 @@
       "provider_key": "rask",
       "provider_name": "Rask",
       "overall_score": 8.5,
+      "translation_accuracy": 9.0,
+      "spoken_naturalness": 9.0,
+      "voice_similarity": 8.0,
+      "speaker_separation": 8.0,
+      "timing_alignment": 8.5,
       "reason": "Candidate C provides the most natural and fluent French translation. The voice is clear and well-paced, and the timing is excellent, making it the most convincing dub."
     },
     {
@@ -530,6 +800,11 @@
       "provider_key": "croon",
       "provider_name": "CROON",
       "overall_score": 8.0,
+      "translation_accuracy": 8.5,
+      "spoken_naturalness": 8.5,
+      "voice_similarity": 7.5,
+      "speaker_separation": 7.5,
+      "timing_alignment": 8.0,
       "reason": "Candidate E is very close to Candidate C in quality, with a natural flow and good translation. It is slightly less polished in terms of voice modulation."
     },
     {
@@ -540,6 +815,11 @@
       "provider_key": "heygen",
       "provider_name": "HeyGen",
       "overall_score": 7.0,
+      "translation_accuracy": 7.5,
+      "spoken_naturalness": 7.5,
+      "voice_similarity": 7.0,
+      "speaker_separation": 6.5,
+      "timing_alignment": 7.0,
       "reason": "Candidate B is a solid dub, but the voice quality is slightly less natural than the top two, and there are minor timing discrepancies."
     },
     {
@@ -550,6 +830,11 @@
       "provider_key": "elevenlabs",
       "provider_name": "ElevenLabs",
       "overall_score": 6.0,
+      "translation_accuracy": 6.5,
+      "spoken_naturalness": 6.0,
+      "voice_similarity": 6.0,
+      "speaker_separation": 6.0,
+      "timing_alignment": 5.5,
       "reason": "Candidate A has some issues with timing and the voice sounds a bit robotic, which detracts from the overall naturalness."
     },
     {
@@ -560,6 +845,11 @@
       "provider_key": "youtube_auto",
       "provider_name": "YouTube Auto-dub",
       "overall_score": 5.0,
+      "translation_accuracy": 5.5,
+      "spoken_naturalness": 5.0,
+      "voice_similarity": 5.0,
+      "speaker_separation": 5.0,
+      "timing_alignment": 4.5,
       "reason": "Candidate D has significant timing issues and the translation feels less natural, making it the least convincing of the group."
     }
   ]

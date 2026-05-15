@@ -55,7 +55,15 @@
           "top1_count": 7,
           "average_rank": 1.6,
           "borda_score": 44,
-          "average_overall_score": 8.26
+          "average_overall_score": 8.26,
+          "criteria_averages": {
+            "translation_accuracy": 8.65,
+            "spoken_naturalness": 8.18,
+            "voice_similarity": 8.07,
+            "speaker_separation": 8.48,
+            "timing_alignment": 7.99,
+            "overall_score": 8.26
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
@@ -63,7 +71,15 @@
           "top1_count": 2,
           "average_rank": 3,
           "borda_score": 30,
-          "average_overall_score": 7.04
+          "average_overall_score": 7.04,
+          "criteria_averages": {
+            "translation_accuracy": 7.52,
+            "spoken_naturalness": 7.0,
+            "voice_similarity": 6.7,
+            "speaker_separation": 7.15,
+            "timing_alignment": 6.88,
+            "overall_score": 7.04
+          }
         },
         "rask": {
           "provider_name": "Rask",
@@ -71,7 +87,15 @@
           "top1_count": 1,
           "average_rank": 3.6,
           "borda_score": 24,
-          "average_overall_score": 6.62
+          "average_overall_score": 6.62,
+          "criteria_averages": {
+            "translation_accuracy": 7.1,
+            "spoken_naturalness": 6.55,
+            "voice_similarity": 6.45,
+            "speaker_separation": 6.65,
+            "timing_alignment": 6.4,
+            "overall_score": 6.62
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
@@ -79,7 +103,15 @@
           "top1_count": 0,
           "average_rank": 2.8,
           "borda_score": 32,
-          "average_overall_score": 7.45
+          "average_overall_score": 7.45,
+          "criteria_averages": {
+            "translation_accuracy": 7.92,
+            "spoken_naturalness": 7.4,
+            "voice_similarity": 7.23,
+            "speaker_separation": 7.5,
+            "timing_alignment": 7.3,
+            "overall_score": 7.45
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
@@ -87,7 +119,15 @@
           "top1_count": 0,
           "average_rank": 4,
           "borda_score": 20,
-          "average_overall_score": 6.24
+          "average_overall_score": 6.24,
+          "criteria_averages": {
+            "translation_accuracy": 6.8,
+            "spoken_naturalness": 6.2,
+            "voice_similarity": 6.05,
+            "speaker_separation": 6.35,
+            "timing_alignment": 5.9,
+            "overall_score": 6.24
+          }
         }
       }
     },
@@ -121,35 +161,75 @@
           "top1_count": 5,
           "average_rank": 1.7,
           "borda_score": 43,
-          "average_overall_score": 8.26
+          "average_overall_score": 8.26,
+          "criteria_averages": {
+            "translation_accuracy": 8.5,
+            "spoken_naturalness": 8.2,
+            "voice_similarity": 8.1,
+            "speaker_separation": 8.35,
+            "timing_alignment": 8.15,
+            "overall_score": 8.26
+          }
         },
         "rask": {
           "provider_name": "Rask",
           "top1_count": 4,
           "average_rank": 1.7,
           "borda_score": 43,
-          "average_overall_score": 8.22
+          "average_overall_score": 8.22,
+          "criteria_averages": {
+            "translation_accuracy": 8.5,
+            "spoken_naturalness": 8.1,
+            "voice_similarity": 8.15,
+            "speaker_separation": 8.3,
+            "timing_alignment": 8.15,
+            "overall_score": 8.22
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 1,
           "average_rank": 2.8,
           "borda_score": 32,
-          "average_overall_score": 7.49
+          "average_overall_score": 7.49,
+          "criteria_averages": {
+            "translation_accuracy": 7.9,
+            "spoken_naturalness": 7.5,
+            "voice_similarity": 7.45,
+            "speaker_separation": 7.5,
+            "timing_alignment": 7.15,
+            "overall_score": 7.49
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
           "top1_count": 0,
           "average_rank": 4.3,
           "borda_score": 17,
-          "average_overall_score": 5.63
+          "average_overall_score": 5.63,
+          "criteria_averages": {
+            "translation_accuracy": 6.1,
+            "spoken_naturalness": 5.6,
+            "voice_similarity": 5.55,
+            "speaker_separation": 5.55,
+            "timing_alignment": 5.25,
+            "overall_score": 5.63
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 0,
           "average_rank": 4.5,
           "borda_score": 15,
-          "average_overall_score": 5.75
+          "average_overall_score": 5.75,
+          "criteria_averages": {
+            "translation_accuracy": 6.25,
+            "spoken_naturalness": 5.65,
+            "voice_similarity": 5.7,
+            "speaker_separation": 5.65,
+            "timing_alignment": 5.5,
+            "overall_score": 5.75
+          }
         }
       }
     },
@@ -183,35 +263,75 @@
           "top1_count": 5,
           "average_rank": 1.7,
           "borda_score": 43,
-          "average_overall_score": 8.66
+          "average_overall_score": 8.66,
+          "criteria_averages": {
+            "translation_accuracy": 9.05,
+            "spoken_naturalness": 8.7,
+            "voice_similarity": 8.5,
+            "speaker_separation": 8.55,
+            "timing_alignment": 8.6,
+            "overall_score": 8.66
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 3,
           "average_rank": 2,
           "borda_score": 40,
-          "average_overall_score": 8.44
+          "average_overall_score": 8.44,
+          "criteria_averages": {
+            "translation_accuracy": 8.8,
+            "spoken_naturalness": 8.5,
+            "voice_similarity": 8.35,
+            "speaker_separation": 8.3,
+            "timing_alignment": 8.4,
+            "overall_score": 8.44
+          }
         },
         "rask": {
           "provider_name": "Rask",
           "top1_count": 1,
           "average_rank": 2.6,
           "borda_score": 34,
-          "average_overall_score": 7.95
+          "average_overall_score": 7.95,
+          "criteria_averages": {
+            "translation_accuracy": 8.35,
+            "spoken_naturalness": 8.0,
+            "voice_similarity": 7.85,
+            "speaker_separation": 7.85,
+            "timing_alignment": 7.85,
+            "overall_score": 7.95
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
           "top1_count": 1,
           "average_rank": 4.2,
           "borda_score": 18,
-          "average_overall_score": 6.27
+          "average_overall_score": 6.27,
+          "criteria_averages": {
+            "translation_accuracy": 6.9,
+            "spoken_naturalness": 6.3,
+            "voice_similarity": 6.25,
+            "speaker_separation": 6.15,
+            "timing_alignment": 6.1,
+            "overall_score": 6.27
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 0,
           "average_rank": 4.5,
           "borda_score": 15,
-          "average_overall_score": 6.2
+          "average_overall_score": 6.2,
+          "criteria_averages": {
+            "translation_accuracy": 6.75,
+            "spoken_naturalness": 6.25,
+            "voice_similarity": 6.2,
+            "speaker_separation": 6.05,
+            "timing_alignment": 5.95,
+            "overall_score": 6.2
+          }
         }
       }
     },
@@ -245,35 +365,75 @@
           "top1_count": 5,
           "average_rank": 1.9,
           "borda_score": 41,
-          "average_overall_score": 8.29
+          "average_overall_score": 8.29,
+          "criteria_averages": {
+            "translation_accuracy": 8.75,
+            "spoken_naturalness": 8.25,
+            "voice_similarity": 7.9,
+            "speaker_separation": 8.7,
+            "timing_alignment": 8.1,
+            "overall_score": 8.29
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 2,
           "average_rank": 3.5,
           "borda_score": 25,
-          "average_overall_score": 7.05
+          "average_overall_score": 7.05,
+          "criteria_averages": {
+            "translation_accuracy": 7.5,
+            "spoken_naturalness": 7.05,
+            "voice_similarity": 6.65,
+            "speaker_separation": 7.35,
+            "timing_alignment": 6.85,
+            "overall_score": 7.05
+          }
         },
         "rask": {
           "provider_name": "Rask",
           "top1_count": 1,
           "average_rank": 2.1,
           "borda_score": 39,
-          "average_overall_score": 8.23
+          "average_overall_score": 8.23,
+          "criteria_averages": {
+            "translation_accuracy": 8.6,
+            "spoken_naturalness": 8.15,
+            "voice_similarity": 7.85,
+            "speaker_separation": 8.6,
+            "timing_alignment": 8.2,
+            "overall_score": 8.23
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
           "top1_count": 1,
           "average_rank": 3.7,
           "borda_score": 23,
-          "average_overall_score": 6.87
+          "average_overall_score": 6.87,
+          "criteria_averages": {
+            "translation_accuracy": 7.3,
+            "spoken_naturalness": 6.85,
+            "voice_similarity": 6.55,
+            "speaker_separation": 7.2,
+            "timing_alignment": 6.7,
+            "overall_score": 6.87
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 1,
           "average_rank": 3.8,
           "borda_score": 22,
-          "average_overall_score": 6.86
+          "average_overall_score": 6.86,
+          "criteria_averages": {
+            "translation_accuracy": 7.3,
+            "spoken_naturalness": 6.8,
+            "voice_similarity": 6.5,
+            "speaker_separation": 7.25,
+            "timing_alignment": 6.75,
+            "overall_score": 6.86
+          }
         }
       }
     },
@@ -307,35 +467,75 @@
           "top1_count": 4,
           "average_rank": 2.3,
           "borda_score": 37,
-          "average_overall_score": 8.12
+          "average_overall_score": 8.12,
+          "criteria_averages": {
+            "translation_accuracy": 8.5,
+            "spoken_naturalness": 8.0,
+            "voice_similarity": 7.95,
+            "speaker_separation": 8.4,
+            "timing_alignment": 7.8,
+            "overall_score": 8.12
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 3,
           "average_rank": 3.1,
           "borda_score": 29,
-          "average_overall_score": 7.51
+          "average_overall_score": 7.51,
+          "criteria_averages": {
+            "translation_accuracy": 7.95,
+            "spoken_naturalness": 7.45,
+            "voice_similarity": 7.3,
+            "speaker_separation": 7.75,
+            "timing_alignment": 7.2,
+            "overall_score": 7.51
+          }
         },
         "rask": {
           "provider_name": "Rask",
           "top1_count": 2,
           "average_rank": 2.3,
           "borda_score": 37,
-          "average_overall_score": 8.1
+          "average_overall_score": 8.1,
+          "criteria_averages": {
+            "translation_accuracy": 8.35,
+            "spoken_naturalness": 8.05,
+            "voice_similarity": 7.95,
+            "speaker_separation": 8.3,
+            "timing_alignment": 7.9,
+            "overall_score": 8.1
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
           "top1_count": 1,
           "average_rank": 3.7,
           "borda_score": 23,
-          "average_overall_score": 6.98
+          "average_overall_score": 6.98,
+          "criteria_averages": {
+            "translation_accuracy": 7.4,
+            "spoken_naturalness": 6.95,
+            "voice_similarity": 6.85,
+            "speaker_separation": 7.15,
+            "timing_alignment": 6.55,
+            "overall_score": 6.98
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 0,
           "average_rank": 3.6,
           "borda_score": 24,
-          "average_overall_score": 7.06
+          "average_overall_score": 7.06,
+          "criteria_averages": {
+            "translation_accuracy": 7.45,
+            "spoken_naturalness": 7.0,
+            "voice_similarity": 6.8,
+            "speaker_separation": 7.25,
+            "timing_alignment": 6.85,
+            "overall_score": 7.06
+          }
         }
       }
     },
@@ -369,35 +569,75 @@
           "top1_count": 4,
           "average_rank": 1.9,
           "borda_score": 41,
-          "average_overall_score": 7.85
+          "average_overall_score": 7.85,
+          "criteria_averages": {
+            "translation_accuracy": 8.2,
+            "spoken_naturalness": 7.68,
+            "voice_similarity": 7.72,
+            "speaker_separation": 8.0,
+            "timing_alignment": 7.77,
+            "overall_score": 7.85
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 3,
           "average_rank": 2,
           "borda_score": 40,
-          "average_overall_score": 7.85
+          "average_overall_score": 7.85,
+          "criteria_averages": {
+            "translation_accuracy": 8.16,
+            "spoken_naturalness": 7.7,
+            "voice_similarity": 7.7,
+            "speaker_separation": 8.0,
+            "timing_alignment": 7.84,
+            "overall_score": 7.85
+          }
         },
         "croon": {
           "provider_name": "CROON",
           "top1_count": 3,
           "average_rank": 2.1,
           "borda_score": 39,
-          "average_overall_score": 7.73
+          "average_overall_score": 7.73,
+          "criteria_averages": {
+            "translation_accuracy": 8.07,
+            "spoken_naturalness": 7.68,
+            "voice_similarity": 7.62,
+            "speaker_separation": 7.8,
+            "timing_alignment": 7.6,
+            "overall_score": 7.73
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
           "top1_count": 0,
           "average_rank": 4.1,
           "borda_score": 19,
-          "average_overall_score": 6.0
+          "average_overall_score": 6.0,
+          "criteria_averages": {
+            "translation_accuracy": 6.5,
+            "spoken_naturalness": 6.0,
+            "voice_similarity": 5.85,
+            "speaker_separation": 5.9,
+            "timing_alignment": 5.75,
+            "overall_score": 6.0
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 0,
           "average_rank": 4.9,
           "borda_score": 11,
-          "average_overall_score": 4.95
+          "average_overall_score": 4.95,
+          "criteria_averages": {
+            "translation_accuracy": 5.65,
+            "spoken_naturalness": 4.9,
+            "voice_similarity": 4.8,
+            "speaker_separation": 4.9,
+            "timing_alignment": 4.5,
+            "overall_score": 4.95
+          }
         }
       }
     },
@@ -431,35 +671,75 @@
           "top1_count": 3,
           "average_rank": 1.9,
           "borda_score": 41,
-          "average_overall_score": 8.2
+          "average_overall_score": 8.2,
+          "criteria_averages": {
+            "translation_accuracy": 8.35,
+            "spoken_naturalness": 8.13,
+            "voice_similarity": 8.17,
+            "speaker_separation": 8.2,
+            "timing_alignment": 8.17,
+            "overall_score": 8.2
+          }
         },
         "croon": {
           "provider_name": "CROON",
           "top1_count": 3,
           "average_rank": 2.2,
           "borda_score": 38,
-          "average_overall_score": 8.07
+          "average_overall_score": 8.07,
+          "criteria_averages": {
+            "translation_accuracy": 8.22,
+            "spoken_naturalness": 7.95,
+            "voice_similarity": 8.05,
+            "speaker_separation": 8.2,
+            "timing_alignment": 7.95,
+            "overall_score": 8.07
+          }
         },
         "rask": {
           "provider_name": "Rask",
           "top1_count": 3,
           "average_rank": 2.4,
           "borda_score": 36,
-          "average_overall_score": 7.88
+          "average_overall_score": 7.88,
+          "criteria_averages": {
+            "translation_accuracy": 8.07,
+            "spoken_naturalness": 7.8,
+            "voice_similarity": 7.8,
+            "speaker_separation": 7.9,
+            "timing_alignment": 7.83,
+            "overall_score": 7.88
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
           "top1_count": 1,
           "average_rank": 3.8,
           "borda_score": 22,
-          "average_overall_score": 6.78
+          "average_overall_score": 6.78,
+          "criteria_averages": {
+            "translation_accuracy": 7.15,
+            "spoken_naturalness": 6.7,
+            "voice_similarity": 6.65,
+            "speaker_separation": 6.75,
+            "timing_alignment": 6.65,
+            "overall_score": 6.78
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 0,
           "average_rank": 4.7,
           "borda_score": 13,
-          "average_overall_score": 5.95
+          "average_overall_score": 5.95,
+          "criteria_averages": {
+            "translation_accuracy": 6.33,
+            "spoken_naturalness": 5.95,
+            "voice_similarity": 5.8,
+            "speaker_separation": 5.85,
+            "timing_alignment": 5.82,
+            "overall_score": 5.95
+          }
         }
       }
     },
@@ -493,35 +773,75 @@
           "top1_count": 5,
           "average_rank": 2,
           "borda_score": 40,
-          "average_overall_score": 8.36
+          "average_overall_score": 8.36,
+          "criteria_averages": {
+            "translation_accuracy": 8.75,
+            "spoken_naturalness": 8.25,
+            "voice_similarity": 8.1,
+            "speaker_separation": 8.5,
+            "timing_alignment": 8.2,
+            "overall_score": 8.36
+          }
         },
         "rask": {
           "provider_name": "Rask",
           "top1_count": 3,
           "average_rank": 1.9,
           "borda_score": 41,
-          "average_overall_score": 8.57
+          "average_overall_score": 8.57,
+          "criteria_averages": {
+            "translation_accuracy": 8.75,
+            "spoken_naturalness": 8.45,
+            "voice_similarity": 8.45,
+            "speaker_separation": 8.65,
+            "timing_alignment": 8.55,
+            "overall_score": 8.57
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 1,
           "average_rank": 3.1,
           "borda_score": 29,
-          "average_overall_score": 7.17
+          "average_overall_score": 7.17,
+          "criteria_averages": {
+            "translation_accuracy": 7.5,
+            "spoken_naturalness": 7.15,
+            "voice_similarity": 7.0,
+            "speaker_separation": 7.2,
+            "timing_alignment": 7.0,
+            "overall_score": 7.17
+          }
         },
         "croon": {
           "provider_name": "CROON",
           "top1_count": 1,
           "average_rank": 4.1,
           "borda_score": 19,
-          "average_overall_score": 6.22
+          "average_overall_score": 6.22,
+          "criteria_averages": {
+            "translation_accuracy": 6.65,
+            "spoken_naturalness": 6.1,
+            "voice_similarity": 6.1,
+            "speaker_separation": 6.25,
+            "timing_alignment": 6.0,
+            "overall_score": 6.22
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 0,
           "average_rank": 3.9,
           "borda_score": 21,
-          "average_overall_score": 6.35
+          "average_overall_score": 6.35,
+          "criteria_averages": {
+            "translation_accuracy": 6.8,
+            "spoken_naturalness": 6.25,
+            "voice_similarity": 6.25,
+            "speaker_separation": 6.35,
+            "timing_alignment": 6.1,
+            "overall_score": 6.35
+          }
         }
       }
     },
@@ -555,35 +875,75 @@
           "top1_count": 6,
           "average_rank": 1.7,
           "borda_score": 43,
-          "average_overall_score": 5.37
+          "average_overall_score": 5.37,
+          "criteria_averages": {
+            "translation_accuracy": 5.53,
+            "spoken_naturalness": 5.35,
+            "voice_similarity": 5.3,
+            "speaker_separation": 5.39,
+            "timing_alignment": 5.4,
+            "overall_score": 5.37
+          }
         },
         "croon": {
           "provider_name": "CROON",
           "top1_count": 1,
           "average_rank": 2.6,
           "borda_score": 34,
-          "average_overall_score": 4.99
+          "average_overall_score": 4.99,
+          "criteria_averages": {
+            "translation_accuracy": 5.21,
+            "spoken_naturalness": 4.97,
+            "voice_similarity": 4.89,
+            "speaker_separation": 5.02,
+            "timing_alignment": 4.88,
+            "overall_score": 4.99
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 1,
           "average_rank": 2.6,
           "borda_score": 34,
-          "average_overall_score": 4.99
+          "average_overall_score": 4.99,
+          "criteria_averages": {
+            "translation_accuracy": 5.2,
+            "spoken_naturalness": 4.99,
+            "voice_similarity": 4.9,
+            "speaker_separation": 4.99,
+            "timing_alignment": 4.93,
+            "overall_score": 4.99
+          }
         },
         "rask": {
           "provider_name": "Rask",
           "top1_count": 1,
           "average_rank": 3.5,
           "borda_score": 25,
-          "average_overall_score": 4.6
+          "average_overall_score": 4.6,
+          "criteria_averages": {
+            "translation_accuracy": 4.84,
+            "spoken_naturalness": 4.57,
+            "voice_similarity": 4.41,
+            "speaker_separation": 4.62,
+            "timing_alignment": 4.55,
+            "overall_score": 4.6
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 1,
           "average_rank": 4.6,
           "borda_score": 14,
-          "average_overall_score": 3.85
+          "average_overall_score": 3.85,
+          "criteria_averages": {
+            "translation_accuracy": 4.21,
+            "spoken_naturalness": 3.85,
+            "voice_similarity": 3.76,
+            "speaker_separation": 3.85,
+            "timing_alignment": 3.67,
+            "overall_score": 3.85
+          }
         }
       }
     },
@@ -617,35 +977,75 @@
           "top1_count": 5,
           "average_rank": 2,
           "borda_score": 40,
-          "average_overall_score": 8.54
+          "average_overall_score": 8.54,
+          "criteria_averages": {
+            "translation_accuracy": 8.85,
+            "spoken_naturalness": 8.35,
+            "voice_similarity": 8.45,
+            "speaker_separation": 8.75,
+            "timing_alignment": 8.35,
+            "overall_score": 8.54
+          }
         },
         "heygen": {
           "provider_name": "HeyGen",
           "top1_count": 3,
           "average_rank": 2.8,
           "borda_score": 32,
-          "average_overall_score": 8.02
+          "average_overall_score": 8.02,
+          "criteria_averages": {
+            "translation_accuracy": 8.4,
+            "spoken_naturalness": 7.9,
+            "voice_similarity": 7.95,
+            "speaker_separation": 8.15,
+            "timing_alignment": 7.75,
+            "overall_score": 8.02
+          }
         },
         "elevenlabs": {
           "provider_name": "ElevenLabs",
           "top1_count": 2,
           "average_rank": 2.7,
           "borda_score": 33,
-          "average_overall_score": 7.84
+          "average_overall_score": 7.84,
+          "criteria_averages": {
+            "translation_accuracy": 8.1,
+            "spoken_naturalness": 7.8,
+            "voice_similarity": 7.8,
+            "speaker_separation": 7.9,
+            "timing_alignment": 7.6,
+            "overall_score": 7.84
+          }
         },
         "croon": {
           "provider_name": "CROON",
           "top1_count": 0,
           "average_rank": 3.4,
           "borda_score": 26,
-          "average_overall_score": 7.52
+          "average_overall_score": 7.52,
+          "criteria_averages": {
+            "translation_accuracy": 7.9,
+            "spoken_naturalness": 7.35,
+            "voice_similarity": 7.45,
+            "speaker_separation": 7.6,
+            "timing_alignment": 7.35,
+            "overall_score": 7.52
+          }
         },
         "youtube_auto": {
           "provider_name": "YouTube Auto-dub",
           "top1_count": 0,
           "average_rank": 4.1,
           "borda_score": 19,
-          "average_overall_score": 6.83
+          "average_overall_score": 6.83,
+          "criteria_averages": {
+            "translation_accuracy": 7.25,
+            "spoken_naturalness": 6.8,
+            "voice_similarity": 6.8,
+            "speaker_separation": 6.85,
+            "timing_alignment": 6.45,
+            "overall_score": 6.83
+          }
         }
       }
     }
@@ -655,5 +1055,27 @@
     "Each evaluation request included the original source clip plus five anonymous candidate dubs for the same 00:00-01:00 range.",
     "Candidates were shuffled in every round and exposed to the model only as Candidate A through Candidate E.",
     "Provider names and original filenames were not included in the prompt."
+  ],
+  "criteria": [
+    {
+      "key": "translation_accuracy",
+      "label": "Translation accuracy"
+    },
+    {
+      "key": "spoken_naturalness",
+      "label": "Spoken naturalness"
+    },
+    {
+      "key": "voice_similarity",
+      "label": "Voice similarity"
+    },
+    {
+      "key": "speaker_separation",
+      "label": "Speaker separation"
+    },
+    {
+      "key": "timing_alignment",
+      "label": "Timing alignment"
+    }
   ]
 }
